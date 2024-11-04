@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="Login.js" defer></script>
+    <link rel="stylesheet" href="Login.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="form-box">
+      <a href="../guest/guest.html"><i class="bx bx-left-arrow-alt"></i></a>
+
+      <div class="button-box">
+        <div id="btn"></div>
+        <button type="button" class="toggle-button" onclick="login()">
+          User
+        </button>
+        <button type="button" class="toggle-button" onclick="register()">
+          Admin
+        </button>
+      </div>
+
+      <form id="login" class="input-grp">
+        <div class="login-input">
+          <input type="text" class="input-field" placeholder="User ID"/>
+          <p class="login-error">User ID is required</p>
+          <div class="password-login-container">
+            <input type="password" class="input-field login-pass" placeholder="Password"/>
+            <img src="icons/eye-close.png" class="show-password">
+          </div>
+          <p class="login-error">Password is required</p>
+          <div class="Forgotpass">Forgot Password?</div>
+          <button type="submit" class="submit-btn">Login</button>   
+        </div>
+
+        <div class="social-login">
+          <p class="or-login">or login with</p>
+
+          <div class="social-icons">
+            <img src="icons/facebook.png" alt="fb" />
+            <img src="icons/google.png" alt="google" />
+            <img src="icons/twitter.png" alt="twitter" />
+          </div>
+        </div>
+        <div class="signup">
+          <p>Don't have an account? <span class="signup-btn">Sign up</span></p>
+        </div>
+
+      </form>
+
+      <form id="register" class="input-grp">
+          <div class="logo"><img src="/img_products/logo_proj.png" width="250px" height="50px"></div>
+          <div class="login-input">
+              <input type="text" class="input-field" placeholder="Admin ID"/>
+              <p class="admin-error">Admin ID is required</p>
+              <input type="email" class="input-field" placeholder="Email Address"/>
+              <p class="admin-error">Email is required</p>
+              <div class="password-admin-container">
+              <input type="password" class="input-field admin-pass" placeholder="Password"/>
+              <img src="icons/eye-close.png" class="show-password">
+              </div>
+              <p class="admin-error">Password is required</p>
+              <button type="submit" class="submit-btn admin-login">Login</button>
+          </div>
+      </form>
+    </div>
+
+    <!-- forgot pass -->
+    <div class="forgot-pass">
+      <p class="exit">&#10060;</p>
+      <p class="forgot-label">Forgot Password</p>
+      <form class="forgot-form">
+        <input type="text" placeholder="User ID" class="forgot-input" id="forgot-user-id" autocomplete="off">
+        <p class="forgot-error">User ID is required</p>
+        <input type="password" placeholder="New Password" class="forgot-input" id="forgot-new-pass">
+         <p class="forgot-error">Password is required</p>
+        <input type="password" placeholder="Confirm New Password" class="forgot-input" id="forgot-confirm-pass">
+         <p class="forgot-error">Confirm Password is required</p>
+        <button type="submit" class="reset-pass">Reset Password</button>
+      </form>
+    </div>
+
+    <!-- captcha -->
+    <div class="captcha-container hide">
+      <p class="captcha-exit">&#10060;</p>
+      <div class="captcha">
+        <div class="captcha-image"></div>
+        <p class="description">Type the character above</p>
+        <form class="captcha-form">
+        <input type="text" required class="captcha-input">
+          <p class="error-message">Incorrect answer, Try again!</p>
+          <button type="submit" class="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- success login -->
+    <div class="success">
+      <div class="success-content">
+        <p>Login Success!</p>
+        <img src="icons/login_success.gif" class="gif">
+      </div>
+    </div>
+
+    <!-- signup -->
+    <div class="signup-container hide">
+      <div class="signup-content">
+        <p class="signup-label">Sign Up</p>
+        <form class="signup-form">
+          <input type="text" placeholder="User ID">
+          <p class="signup-error">User ID is required</p>
+          <input type="password" placeholder="Password">
+          <p class="signup-error">Password is required</p>
+          <input type="password" placeholder="Confirm Password">
+          <p class="signup-error">Confirming is required</p>
+          <button type="submit" class="create-account-btn">Create Account</button>
+        </form>
+        <p class="already-have">Already have an account? <span class="login-btn">Login</span></p>
+      </div>    
+    </div>
+
+    <!-- forgot pass success -->
+    <div class="forgot-success-container hide">
+      <div class="forgot-success-content">
+        <p>Password changed successfully!</p>
+        <img src="icons/forgot-pass-success.png">
+      </div>
+    </div>
+
+  </body>
+</html>

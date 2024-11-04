@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AppleSphere</title>
+    <link rel="icon" type="image/x-icon" href="img/logo_icon.ico" />
+    <link rel="stylesheet" href="guess.css" />
+    <script src="guest.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- scroller -->
+    <div id="progress">
+      <span id="progress-value">&#x1F815;</span>
+    </div>
+
+    <!-- header -->
+    <header>
+      <a href="#"
+        ><img src="/img_products/logo_proj.png" alt="Logo" width="180" class="logo"
+      /></a>
+
+      <div class="search-container">
+        <form class="row-search" onsubmit="searchProd(event)">
+          <input type="search" placeholder="Search Product" id="search-product" autocomplete="off"/>
+          <button type="submit">
+            <img src="/img_products/icons/search_icon.png" alt="search-icon" class="search-btn"/>
+          </button>
+        </form>
+        <div class="suggestion-row"></div>
+      </div>
+
+      <div class="add-to-cart">
+        <div class="cart-header" id="cart-header">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="order-count">0</span>
+        </div>
+        <div class="my-account" id="my-account">
+          <i class="fa-solid fa-user"></i>
+          <a href="../login_user/Login.html" class="my-account"
+            ><p>My Account</p></a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- sidebar cart -->
+    <div class="cart-side-bar" id="cart-side-bar">
+      <!-- cart close -->
+      <i class="fa-solid fa-x close-cart-sidebar"></i>
+      <h2 class="cart-title">No item in your cart</h2>
+
+      <!-- order -->
+      <div class="cart-content"></div>
+
+      <!-- total -->
+      <div class="total">
+        <div class="total-title">Total:</div>
+        <div class="total-price">₱ 0</div>
+      </div>
+
+      <!-- buy button -->
+      <button type="button" class="buy-btn"><p>Buy Now</p></button>
+    </div>
+
+    <!-- landing page -->
+    <section class="landing-page">
+      <h1 class="title">Make someone's <span>Christmas</span> &#127873;</h1>
+      <a href="#apple-product-section"><p>Buy Now!</p></a>
+    </section>
+
+    <!-- for slider category -->
+    <section class="apple-product-section" id="apple-product-section">
+      <h2>Checkout what we have!</h2>
+      <img
+        src="/img_products/icons/left arrow.png"
+        alt="Left arrow"
+        class="arrow left-arrow hide-arrow-btn"
+        id="left"
+      />
+      <div class="apple-product-carousel">
+        <a href="#mac-products-container">
+          <div>
+            <img src="/img_products/category/mac.png" alt="mac" draggable="false" />
+            <h3>Mac</h3>
+          </div>
+        </a>
+        <a href="#iphone-products-container">
+          <div>
+            <img
+              src="/img_products/category/iphone.png"
+              alt="iphone"
+              draggable="false"
+            />
+            <h3>iPhone</h3>
+          </div>
+        </a>
+        <a href="#ipad-products-container">
+          <div>
+            <img src="/img_products/category/ipad.png" alt="ipad" draggable="false" />
+            <h3>iPad</h3>
+          </div>
+        </a>
+        <a href="#watch-products-container">
+          <div>
+            <img
+              src="/img_products/category/watch.png"
+              alt="apple watch"
+              draggable="false"
+            />
+            <h3>Apple Watch</h3>
+          </div>
+        </a>
+        <a href="#airpods-products-container">
+          <div>
+            <img
+              src="/img_products/category/airpods.png"
+              alt="airpods"
+              draggable="false"
+            />
+            <h3>AirPods</h3>
+          </div>
+        </a>
+      </div>
+      <img
+        src="/img_products/icons/right arrow.png"
+        alt="right arrow"
+        class="arrow right-arrow"
+        id="right"
+      />
+    </section>
+
+    <!-- for all products -->
+    <section class="products">
+      <!-- for latest product -->
+      <h2 class="latest-title">What's new?</h2>
+      <div class="product-container"></div>
+
+      <!-- for mac products -->
+      <hr />
+      <div
+        class="mac-products-container item-container"
+        id="mac-products-container"
+      >
+        <h2 class="category-title">Mac Products</h2>
+        <div class="mac-product"></div>
+      </div>
+
+      <!-- for iphone products -->
+      <hr />
+      <div
+        class="iphone-products-container item-container"
+        id="iphone-products-container"
+      >
+        <h2 class="category-title">iPhone Products</h2>
+        <div class="iphone-product"></div>
+      </div>
+      <!-- airpods products -->
+      <hr />
+      <div
+        class="airpods-products-container item-container"
+        id="airpods-products-container"
+      >
+        <h2 class="category-title">Airpods Products</h2>
+        <div class="airpods-product"></div>
+      </div>
+      <!-- for ipad products -->
+      <hr />
+      <div
+        class="ipad-products-container item-container"
+        id="ipad-products-container"
+      >
+        <h2 class="category-title">iPad Products</h2>
+        <div class="ipad-product"></div>
+      </div>
+
+      <!-- for apple watch products -->
+      <hr />
+      <div
+        class="watch-products-container item-container"
+        id="watch-products-container"
+      >
+        <h2 class="category-title">Apple Watch Products</h2>
+        <div class="watch-product"></div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <div class="about">
+          <h2>About</h2>
+          <p>
+            Discover the world of Apple at AppleSphere! Your go-to hub for the
+            latest iPhones, MacBooks, iPads, and accessories. We offer
+            cutting-edge technology, expert advice, and swift delivery, ensuring
+            a seamless shopping experience. Embrace innovation with us!
+          </p>
+        </div>
+
+        <div class="information">
+          <h2>Informations</h2>
+          <ul>
+            <li>About us</li>
+            <li>Message us</li>
+            <li>Term & Condition</li>
+            <li>Return & Exchange</li>
+            <li>Shipping & Delivery</li>
+            <li>Private Policy</li>
+          </ul>
+        </div>
+
+        <div class="payment">
+          <h2>Payment Methods</h2>
+          <ul>
+            <li><i class="fa-brands fa-cc-paypal"></i>Paypal</li>
+            <li><i class="fa-brands fa-cc-visa"></i>Visa</li>
+            <li><i class="fa-brands fa-cc-discover"></i>Discover</li>
+            <li><i class="fa-solid fa-truck"></i>Cash on Delivery</li>
+          </ul>
+          <p><i class="fa-solid fa-lock secure"></i> Secure Payment!</p>
+        </div>
+
+        <div class="contact">
+          <h2>Contact</h2>
+          <p>
+            <i class="fa-solid fa-location-dot" style="font-size: 25px"></i
+            >Hagonoy, Bulacan
+          </p>
+          <hr id="contact-line" />
+          <div class="contact-info">
+            <p><i class="fa-solid fa-phone"></i>09453986712</p>
+            <a href="mailto:applesphere@gmail.com" class="footer-contact"
+              ><p>
+                <i class="fa-solid fa-envelope"></i>applesphere@gmail.com
+              </p></a
+            >
+          </div>
+          
+         <div class ="share-button">
+            <span><i class="fas fa-share-alt"></i>Share!</span>
+            <a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=966242223397117&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fsharer.php%3Ft%26u%3Dhttp%253A%252F%252F127.0.0.1%253A5500%252FUser%252520Profile%252Fsharing.html&cancel_url=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Fclose_window%2F%3Fapp_id%3D966242223397117%26connect%3D0%23_%3D_&display=popup&locale=en_US" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fintent%2Ftweet%3Ftext%3D%26url%3Dhttp%253A%252F%252F127.0.0.1%253A5500%252FUser%252520Profile%252Fsharing.html" target="_blank"><i class ="fab fa-twitter"></i></a>
+            <a href="https://mail.google.com/mail/u/0/?to&su&body=http://127.0.0.1:5500/User%2520Profile/sharing.html&bcc&cc&fs=1&tf=cm" target="_blank"><i class ="fab fa-google"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+        </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

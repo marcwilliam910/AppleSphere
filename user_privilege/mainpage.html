@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AppleSphere</title>
+    <link rel="stylesheet" href="mainpage.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <script src="mainpage.js" defer></script>
+  </head>
+  <body>
+    <header>
+        <div class="left-side">
+          <a href="#"><img src="mainpage img/logo_proj.png" alt="AppleSphere logo" class="logo"></a>
+          <a href="#mac-products-container" class="navbar-categ">Mac</a>
+          <a href="#iphone-products-container" class="navbar-categ">iPhone</a>
+          <a href="#airpods-products-container" class="navbar-categ">AirPods</a>
+          <a href="#ipad-products-container" class="navbar-categ">iPad</a>
+          <a href="#watch-products-container" class="navbar-categ">Apple Watch</a>
+          
+        </div>
+        <div class="right-side">
+          <ul class="right-side-icons">
+            <li><input type="text" class="search-input"  placeholder="Search Products"></li>
+            <li class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></li>
+            <li class="add-to-cart-container">
+              <div class="cart-header" id="cart-header">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="order-count">0</span>
+              </div>
+            </li>
+            <li class="dropdown">
+              <img src="mainpage img/icon/user-profile.png" alt="user profile" class="user-image">
+              <ul class="dropdown-items">
+                <li class="profile"><i class="fa-regular fa-user"></i><p>Profile</p></li>
+                <li class="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i><p>Logout</p></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      <div class="suggestion-row"></div>
+      </div>
+    </header>
+
+    <div class="cart-side-bar" id="cart-side-bar">
+      <!-- cart close -->
+      <i class="fa-solid fa-x close-cart-sidebar"></i>
+      <h2 class="cart-title">No item in your cart</h2>
+
+      <!-- order -->
+      <div class="cart-content"></div>
+
+      <!-- total -->
+      <div class="total">
+        <div class="total-title">Total:</div>
+        <div class="total-price">₱ 0</div>
+      </div>
+
+      <!-- buy button -->
+      <button type="button" class="buy-btn"><p>Buy Now</p></button>
+    </div>
+
+
+    <section class="landing-section">
+      <i class="fa-solid fa-chevron-left arrow-left slider-arrow"></i>
+      <div class="slides">
+
+          <div class="slide1 slide">
+            <!-- para lang bumaba yung image -->
+            <h2 class="black-bg"></h2>
+            <div class="landing-page">
+              <div class="landing-description">
+                <h2 class="landing-title">iPhone 15 Pro Max</h2>
+                <p class="landing-iphone-price">Starting at <u>₱84,990</u></p>
+                <a href="#products" class="landing-addtocart addtocart-slider">Add to cart <span class="arrow">➝</span></a>
+              </div>
+              <div class="specs">
+                <div class="spec">
+                  <img src="mainpage img/iphone-specs/chip_spec.png">
+                  <p class="spec-label">A17 Pro chip with <br> 6-core GPU</p>
+                </div>
+
+                <div class="spec">
+                  <img src="mainpage img/iphone-specs/pro_camera_spec.png">
+                  <p class="spec-label">Pro camera system</p>
+                  <p class="spec-des">Our most advanced 48MP Main camera 3x or 5x Telephoto camera Ultra Wide camera</p>
+                </div>
+
+                <div class="spec">
+                  <img src="mainpage img/iphone-specs/batter_spec.png">
+                  <p class="spec-label">Up to 29 hours video playback</p>
+                </div>
+
+                <div class="spec">
+                  <h2>6.7″</h2>
+                  <p class="spec-des">Super Retina XDR display <br> ProMotion technology <br> Always-On display</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide2 slide">
+             <!-- para lang bumaba yung image -->
+            <h2 class="black-bg"></h2>
+            <div class="watch-page">
+               <div class="watch-description">
+                <h2 class="watch-title">Apple Watch Series 9</h2>
+                <p class="landing-watch-price">Starting at <u>₱26,490</u></p>
+                <a href="#products" class="watch-addtocart addtocart-slider">Add to cart <span class="arrow">➝</span></a>
+              </div>
+              <div class="watch-specs">
+                <div class="watch-spec watch-spec1">
+                  <img src="mainpage img/watch-specs/watch-carbon.png">
+                  <p>Carbon-neutral <br> combinations available</p>
+                </div>
+                <div class="watch-spec watch-spec2">
+                  <img src="mainpage img/watch-specs/watch-retina.png" width="45" height="45">
+                  <p>Always-On Retina display <br> Up to 2,000 nits</p>
+                </div>
+                <div class="watch-spec watch-spec3">
+                  <img src="mainpage img/watch-specs/watch-s9.png">
+                  <p>Double tap gesture <br> Precision Finding for iPhone</p>
+                </div>
+                <div class="watch-spec watch-spec4">
+                  <i class="fa-solid fa-heart-pulse blood-oxygen"></i>
+                  <p>Blood Oxygen app</p>
+                  <p>ECG app4 <br> High and low heart rate notifications</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="slide3 slide">
+            <!-- para lang bumaba yung image -->
+            <h2 class="black-bg"></h2>
+            <div class="airpods-page">
+               <div class="airpods-description">
+                   <h2 class="landing-title">AirPods Max</h2>
+                  <p class="landing-airpods-price">Starting at <u>₱26,490</u></p>
+                  <a href="#products" class="airpods-addtocart addtocart-slider">Add to cart <span class="arrow">➝</span></a>
+              </div>
+
+              <div class="airpods-specs">
+                <div class="airpods-spec airpods-spec1">
+                  <img src="mainpage img/airpods-specs/noise-cancellation.png">
+                  <p>Active Noise Cancellation</p>
+                </div>
+                <div class="airpods-spec airpods-spec2">
+                  <img src="mainpage img/airpods-specs/tranparency.png">
+                  <p>Transparency mode</p>
+                </div>
+                <div class="airpods-spec airpods-spec4">
+                  <img src="mainpage img/airpods-specs/h1-chip.png">
+                  <p>H1 chip</p>
+                </div>
+                <div class="airpods-spec airpods-spec3">
+                  <img src="mainpage img/airpods-specs/spatial.png">
+                  <p>Personalized Spatial Audio <br> with dynamic head tracking</p>
+                </div>
+              </div>
+              
+            </div>
+
+          </div>
+
+      </div>
+      <i class="fa-solid fa-chevron-right arrow-right slider-arrow"></i>
+    </section>
+
+     <!-- para lang bumaba yung image -->
+      <h2 class="black-bg"></h2>
+
+    <section class="banner">
+      <img src="/img_products/warranty.png" alt="warranty" class="warranty">
+      <ul type="none">
+        <h3 class="banner-top">Your Trusted Source for Authenticity and Quality </h3>
+        <li>100% Authentic Apple Products </li>
+        <li>Official Apple Authorized Distributor</li>
+        <li>Comprehensive Warranty Coverage</li>
+        <li>Unmatched Quality and Originality Guaranteed</li>
+
+        <p class="banner-bottom">Shop with Confidence <br> AppleSphere - "Where Quality Meets Trust"</p>
+      </ul>
+
+      </p>
+      <img src="/img_products/Apple-banner.png" alt="apple products" class="banner-apple">
+    </section>
+
+    <!-- products -->
+     <section class="products" id="products">
+      <!-- for latest product -->
+      <h2 class="latest-title">What's new?</h2>
+      <div class="product-container"></div>
+
+      <!-- for mac products -->
+      <hr />
+      <div
+        class="mac-products-container item-container"
+        id="mac-products-container"
+      >
+        <h2 class="category-title">Mac Products</h2>
+        <div class="mac-product"></div>
+      </div>
+
+      <!-- for iphone products -->
+      <hr />
+      <div
+        class="iphone-products-container item-container"
+        id="iphone-products-container"
+      >
+        <h2 class="category-title">iPhone Products</h2>
+        <div class="iphone-product"></div>
+      </div>
+      <!-- airpods products -->
+      <hr />
+      <div
+        class="airpods-products-container item-container"
+        id="airpods-products-container"
+      >
+        <h2 class="category-title">Airpods Products</h2>
+        <div class="airpods-product"></div>
+      </div>
+      <!-- for ipad products -->
+      <hr />
+      <div
+        class="ipad-products-container item-container"
+        id="ipad-products-container"
+      >
+        <h2 class="category-title">iPad Products</h2>
+        <div class="ipad-product"></div>
+      </div>
+
+      <!-- for apple watch products -->
+      <hr />
+      <div
+        class="watch-products-container item-container"
+        id="watch-products-container"
+      >
+        <h2 class="category-title">Apple Watch Products</h2>
+        <div class="watch-product"></div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <div class="about">
+          <h2>About</h2>
+          <p>
+            Discover the world of Apple at AppleSphere! Your go-to hub for the
+            latest iPhones, MacBooks, iPads, and accessories. We offer
+            cutting-edge technology, expert advice, and swift delivery, ensuring
+            a seamless shopping experience. Embrace innovation with us!
+          </p>
+        </div>
+
+        <div class="information">
+          <h2>Informations</h2>
+          <ul>
+            <li>About us</li>
+            <li>Message us</li>
+            <li>Term & Condition</li>
+            <li>Return & Exchange</li>
+            <li>Shipping & Delivery</li>
+            <li>Private Policy</li>
+          </ul>
+        </div>
+
+        <div class="payment">
+          <h2>Payment Methods</h2>
+          <ul>
+            <li><i class="fa-brands fa-cc-paypal"></i>Paypal</li>
+            <li><i class="fa-brands fa-cc-visa"></i>Visa</li>
+            <li><i class="fa-brands fa-cc-discover"></i>Discover</li>
+            <li><i class="fa-solid fa-truck"></i>Cash on Delivery</li>
+          </ul>
+          <p><i class="fa-solid fa-lock secure"></i> Secure Payment!</p>
+        </div>
+
+        <div class="contact">
+          <h2>Contact</h2>
+          <p>
+            <i class="fa-solid fa-location-dot" style="font-size: 25px"></i
+            >Hagonoy, Bulacan
+          </p>
+          <hr id="contact-line" />
+          <div class="contact-info">
+            <p><i class="fa-solid fa-phone"></i>09453986712</p>
+            <a href="mailto:applesphere@gmail.com" class="footer-contact"
+              ><p>
+                <i class="fa-solid fa-envelope"></i>applesphere@gmail.com
+              </p></a
+            >
+          </div>
+          
+         <div class ="share-button">
+            <span><i class="fas fa-share-alt"></i>Share!</span>
+            <a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=966242223397117&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fsharer.php%3Ft%26u%3Dhttp%253A%252F%252F127.0.0.1%253A5500%252FUser%252520Profile%252Fsharing.html&cancel_url=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Fclose_window%2F%3Fapp_id%3D966242223397117%26connect%3D0%23_%3D_&display=popup&locale=en_US" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fintent%2Ftweet%3Ftext%3D%26url%3Dhttp%253A%252F%252F127.0.0.1%253A5500%252FUser%252520Profile%252Fsharing.html" target="_blank"><i class ="fab fa-twitter"></i></a>
+            <a href="https://mail.google.com/mail/u/0/?to&su&body=http://127.0.0.1:5500/User%2520Profile/sharing.html&bcc&cc&fs=1&tf=cm" target="_blank"><i class ="fab fa-google"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+        </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="message-container">
+      <div class="message-content">
+        <h2 class="message-label">How can we help?</h2>
+        <form class="message-form">
+          <textarea class="message-input" placeholder="Write your message here"></textarea>
+          <button type="submit" class="message-send">Send</button>
+        </form>
+
+        <div class="faq-container">
+          <h3 class="faq-label">FAQ's</h2>
+          <div class="faq-item">
+            <button class="question" onclick="toggleAnswer(1)">How long does it take for my Apple product to be delivered?</button>
+            <div class="answer" id="answer1">
+              The delivery time depends on your location and the shipping method selected. Typically, standard shipping takes 4-6 days. You can track your order using the provided tracking information once it's shipped.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="question" onclick="toggleAnswer(2)">Can I modify or cancel my order after it has been placed?</button>
+            <div class="answer" id="answer2">
+              Once an order is confirmed, our system processes it quickly to ensure timely delivery. Unfortunately, this means we can't guarantee modifications or cancellations. Please double-check your order before confirming. If you have concerns, contact our customer support team, and we'll do our best to assist you.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="question" onclick="toggleAnswer(3)">What is the return policy for Apple products?</button>
+            <div class="answer" id="answer3">
+              We want you to be satisfied with your purchase. Our return policy allows for returns within 7 days of the delivery date. The product must be in its original condition with all accessories included. Visit our 'Returns' page for detailed instructions on initiating a return, and feel free to reach out to our customer support for any assistance.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="message-us">
+      <img src="mainpage img/icon/message-us.png" class="message-image">
+    </div>
+
+    <div class="buy-success-container"> 
+      <div class="buy-success">
+        <div class="buy-success-content">
+          <h3 class="buy-success-label">Thank you for your purchase! <br> Your order has been placed successfully. </h3>
+          <img src="mainpage img/icon/cart-check.png" class="cart-check">
+          <h2 class="buy-success-total"></h2>
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

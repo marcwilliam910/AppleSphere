@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,900&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;1,300;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", "Times New Roman", Times, serif;
+}
+
+.hide{
+  display: none;
+}
+
+.sidebar{
+    height: 100vh;
+    width: 350px;
+    background-color: rgb(40, 40, 40);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 30px 0px;
+    color: white;
+}
+
+/* profile */
+.profile{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile img{
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.profile p {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+}
+
+.fa-right-from-bracket{
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.home{
+    padding-right: 30px;
+}
+
+.profile .name{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.address, .email, .number{
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.profile-icon{
+    margin-right: 20px;
+    font-size: 25px;
+    color: tomato;
+}
+
+/* order history */
+.menu{
+    width: 100%;
+    margin-top: 60px;
+}
+.order-history, .wishlist, .home{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.active{
+    background-color: rgb(50, 50, 50);   
+}
+
+.menu div:hover{
+    background-color: rgb(50, 50, 50);
+}
+
+/* order history container */
+.order-history-container{
+    margin-left: 330px;
+    background-color: rgb(50, 50, 50); 
+    width: calc(100% - 350px);
+   
+}
+.order-history-content{
+    padding: 30px 50px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+/* history label */
+.history-label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.order-history-content h2{
+    font-size: 40px;
+    font-weight: bold;
+    color: white; 
+    margin-right: 20px;
+}
+
+.history-label img{
+  width: 60px;
+}
+
+/* history items */
+.order-history-items{
+    width: 100%;
+    height: 500px;
+    background-color: rgb(40, 40, 40);
+    border-radius: 10px;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+table{
+    width: 100%;
+    height: 500px;
+    color: white;   
+}
+
+.header th{
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: tomato;
+}
+
+.item td{
+    max-width: 30px;
+    word-wrap: break-word;
+    padding-bottom: 20px;
+}
+
+table tr{
+    text-align: center;
+}
+
+.status, .add-feedback{
+    padding: 5px 10px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    max-width: 200px;
+    text-align: left;
+}
+
+.container{
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  width: 400px;
+  background: #111;
+  padding: 20px 30px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: none;
+}
+.container .post{
+  display: none;
+}
+.container .text{
+  font-size: 25px;
+  color: #666;
+  font-weight: 500;
+}
+.container .edit{
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+  cursor: pointer;
+}
+.container .edit:hover{
+  text-decoration: underline;
+}
+.container .star-widget input{
+  display: none;
+}
+.star-widget label{
+  font-size: 40px;
+  color: #444;
+  padding: 10px;
+  float: right;
+  transition: all 0.2s ease;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+  color: #fd4;
+}
+input:checked ~ label{
+  color: #fd4;
+}
+input#rate-5:checked ~ label{
+  color: #fe7;
+  text-shadow: 0 0 20px #952;
+}
+#rate-1:checked ~ form header:before {
+  content: "Below Expectations 😡";
+}
+
+#rate-2:checked ~ form header:before {
+  content: "Not Up to Par 😠";
+}
+
+#rate-3:checked ~ form header:before {
+  content: "Meets Expectations 👌";
+}
+
+#rate-4:checked ~ form header:before {
+  content: "Exceeds Expectations 😍";
+}
+
+#rate-5:checked ~ form header:before {
+  content: "Outstanding Quality 🤩";
+}
+
+.container form{
+  display: none;
+}
+input:checked ~ form{
+  display: block;
+}
+form header{
+  width: 100%;
+  font-size: 25px;
+  color: #fe7;
+  font-weight: 500;
+  margin: 5px 0 20px 0;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+form .textarea{
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+}
+form .textarea textarea{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: #eee;
+  border: 1px solid #333;
+  background: #222;
+  padding: 10px;
+  font-size: 17px;
+  resize: none;
+}
+.textarea textarea:focus{
+  border-color: #444;
+}
+form .btn{
+  height: 45px;
+  width: 100%;
+  margin: 15px 0;
+}
+form .btn button{
+  height: 100%;
+  width: 100%;
+  border: 1px solid #444;
+  outline: none;
+  background: #222;
+  color: #999;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form .btn button:hover{
+  background: #1b1b1b;
+}

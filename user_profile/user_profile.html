@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="user_profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <script src="user-profile.js" defer></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <div class="profile">
+                <img src="img/user-profile.png">
+                <h2 class="name">Juan Dela Cruz</h2>
+                <p class="number"><i class="fa-solid fa-phone profile-icon"></i>09453376844</p>
+                <p class="address"><i class="fa-solid fa-location-dot profile-icon"></i>Iba, Hagonoy, Bulacan</p>
+                <p class="email"><i class="fa-solid fa-envelope profile-icon"></i>juandelacruz@gmail.com</p>
+            </div>
+            <div class="menu">
+                <div class="order-history active">Order History</div>
+                <div class="wishlist">Wishlist</div>
+                <div class="home"><i class="fa-solid fa-right-from-bracket fa-rotate-180"></i>Go Back</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="order-history-container">
+        <div class="order-history-content">
+            <div class="history-label">
+                <h2>Order History</h2>
+                <img src="img/order-history.png">
+            </div>
+            
+            <div class="order-history-items">
+                <table class="orderHistoryTable">
+                    <tr class="header">
+                        <th>Product Name</th>
+                        <th>No. of Items</th>
+                        <th>Total Price</th>
+                        <th>Status</th>
+                        <th>Rate/Feedback</th>
+                    </tr>             
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- feedback container -->
+     <div class="container">
+      <div class="post">
+        <div class="text">Thanks for rating us!</div>
+        <div class="edit">EDIT</div>
+      </div>
+      <div class="star-widget">
+        <input type="radio" name="rate" id="rate-5">
+        <label for="rate-5" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-4">
+        <label for="rate-4" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-3">
+        <label for="rate-3" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-2">
+        <label for="rate-2" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-1">
+        <label for="rate-1" class="fas fa-star"></label>
+        <form action="#" onsubmit="resetForm(event)">
+          <header></header>
+          <div class="textarea">
+            <textarea cols="30" placeholder="Rate our product" class="review"></textarea>
+          </div>
+          <div class="btn">
+            <button type="submit" class="post-btn">Post</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+</body>
+</html>
